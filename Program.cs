@@ -7,9 +7,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Product product = new Product(5, "Ovod", 15,5);
+            Console.WriteLine("Kitabin sayini daxil edin");
+            int count=Convert.ToInt32(Console.ReadLine());
+            Book[] books = new Book[count];
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("No:");
+                int no = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ad:");
+                string name = Console.ReadLine();
+                Console.WriteLine("Qiymeti(AZN):");
+                int price = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Janr:");
+                string genre = Console.ReadLine();
+
+                Book newbook = new(no, name, price, genre);
+                books[i] = newbook;
                
-            
-        }
+            }
+                 for (int i = 0; i < count; i++) 
+            { Console.WriteLine($"{books[i].Name} {books[i].Price}"); }
+
+
+        }       
     }
 }

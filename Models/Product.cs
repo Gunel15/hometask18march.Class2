@@ -14,12 +14,12 @@ namespace ConsoleApp1.Models
         public int Price;
         public int Count;
 
-        public Product(int no,string name,int price,int count) 
+        public Product(int no,string name,int price) 
         {  
             No = no;
             Name = name;
             Price = price;
-            Count = count;
+           
             
         }
       
